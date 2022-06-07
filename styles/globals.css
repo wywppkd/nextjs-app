@@ -1,16 +1,93 @@
+/* 统一样式 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 html,
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  font-family: /*西文*/ -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial,
+    /*中文*/ PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN,
+    sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+button {
+  border: 0;
 }
 
-* {
-  box-sizing: border-box;
+ol,
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+/* 原子工具类名 */
+
+/* 浮动 */
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+/* 文本对齐 */
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+
+/* 按钮禁用 */
+.button-disabled {
+  color: hsla(0, 0%, 100%, 0.6);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* 图片自适应 */
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*单行溢出省略*/
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/*两行溢出省略*/
+.ellipsis_2 {
+  display: -webkit-box;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 2; /* 数值代表显示几行 */
+  -webkit-box-orient: vertical;
 }
