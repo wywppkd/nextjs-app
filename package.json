@@ -9,7 +9,7 @@
     "lint-staged": "lint-staged",
     "lint:style": "stylelint --fix \"pages/**/*.scss\" --syntax scss",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
-    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./pages ./components && npm run lint:style",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
     "tsc": "tsc --noEmit"
   },
   "gitHooks": {
